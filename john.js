@@ -8,17 +8,17 @@ function force() {
 
 function showcase() {
     standard.innerHTML = "1) " + ShoppingList[0];
-    for (let i = 1; i < ShoppingList.length; i++){
-        standard.innerHTML += "<br />" + (i+1) + ") " + ShoppingList[i];
+    for (let f = 1; f < ShoppingList.length; f++){
+        standard.innerHTML += "<br />" + (f+1) + ") " + ShoppingList[f];
     }
 }
 
 function indexesOf(array, itm) {
     let idxList = [];
 
-    for (let i = 0; i < array.length; i++)
-        if (itm === array[i])
-            idxList.push(i);
+    for (let f = 0; f < array.length; f++)
+        if (itm === array[f])
+            idxList.push(f);
     return idxList;
 }
 
