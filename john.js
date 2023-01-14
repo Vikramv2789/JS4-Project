@@ -1,6 +1,6 @@
 function force() {
     standard = document.getElementById("standard");
-    foodSelectionBox = document.getElementById("foodsel");
+    Item = document.getElementById("foodsel");
     countBox = document.getElementById("count");
     ShoppingList = ["Oranges", "Juice", "Bacon"];
     showcase();
@@ -23,22 +23,22 @@ function indexesOf(array, itm) {
 }
 
 function Addanitem() {
-    if(!ShoppingList.includes(foodSelectionBox.value)){
-        ShoppingList.push(foodSelectionBox.value);
+    if(!ShoppingList.includes(Item.value)){
+        ShoppingList.push(Item.value);
         showcase();
     }
 }
 
 
 function DeleteanItem() {
-    if(ShoppingList.includes(foodSelectionBox.value)){
-        ShoppingList.splice(indexesOf(ShoppingList, foodSelectionBox.value), 1);
+    if(ShoppingList.includes(Item.value)){
+        ShoppingList.splice(indexesOf(ShoppingList, Item.value), 1);
         showcase();
     }
 }
 
 function MoveUpandMoveDown(new_indexP) {
-    let old_index = parseInt(foodSelectionBox.value);
+    let old_index = parseInt(Item.value);
     let new_index = old_index + parseInt(new_indexP);
     if(new_index < 0){
         return;
@@ -48,6 +48,6 @@ function MoveUpandMoveDown(new_indexP) {
         return;
     }
     ShoppingList.splice(new_index, 0, ShoppingList.splice(old_index, 1)[0]);
-    foodSelectionBox.value = new_index;
+    Item.value = new_index;
     showcase();
 };
