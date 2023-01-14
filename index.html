@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grocery List</title>
+  <style> 
+    h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: purple;
+    
+    
+}
+    body {
+      background-color: rgb(10,4,5);
+      color: yellow;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    } 
+
+.textinput {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+  </style>
+  <script src="john.js"></script>
+</head>
+  <body onload="force();">
+    <h1>Grocery List</h1>
+    <p>If you want to add or delete a shopping item, type the name of the food<br>If you want to move an item up or down, type the number on the left of the item in the list</p>
+    <br>
+    <br>
+    <div class="list">
+      <label>Item: <input type="text" id="foodsel"></label>
+      <button onclick = "DeleteanItem();">Delete a food item</button>
+      <button onclick = "Addanitem();">Add a food item </button>
+      <button onclick = "MoveUpandMoveDown(1);">Move an item down</button>
+      <button onclick = "MoveUpandMoveDown(-1);">Move an item up</button>
+        </div>
+    <div class="standard">
+      <div id="standard"></div>
+    </div>
+ 
+  </body>
+</html>
