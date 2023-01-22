@@ -4,27 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Grocery List</title>
-  <img id="Grocery" src="06WALMART-4-jumbo.jpg" alt="Puttingitemsinbag">
 <link rel="stylesheet" href="style.css">
   <script>
     function force() {
     standard = document.getElementById("standard");
-    Item = document.getElementById("foodsel");
+    Item = document.getElementById("item");
     countBox = document.getElementById("count");
-    ShoppingList = ["Oranges", "Juice", "Bacon", "Skittles"];
+    ShoppingList = ["Cupcakes", "Coke", "Bacon", "Skittles"];
     showcase();
 }
 
 function showcase() {
-    standard.innerHTML = "1) " + ShoppingList[0];
+    standard.innerHTML = "1." + ShoppingList[0];
     for (let f = 1; f < ShoppingList.length; f++){
-        standard.innerHTML += "<br />" + (f+1) + ") " + ShoppingList[f];
+        standard.innerHTML += "<br/>" + (f+1) + " ." + ShoppingList[f];
     }
 }
 
 function indxsOf(array, items) {
     let idexList = [];
-
     for (let f = 0; f < array.length; f++)
         if (items === array[f])
             idexList.push(f);
@@ -64,14 +62,18 @@ function MoveUpandMoveDown(frontal_indexP) {
 </head>
   <body onload="force();">
     <h1>Grocery List</h1>
-    <p>If you want to add or delete a shopping item, type the name of the food<br>If you want to move an item up or down, type the number on the left(and subtract by 1, so say you want item 1 you need to type 0) of the item in the list</p>
-    <br>
-    <br>
+    <img id="Grocery" src="06WALMART-4-jumbo.jpg" alt="Puttingitemsinbag">
+    <p>Add an item and delete one by typing a name in the box</p>
+     <p> Move an item up and down by typing a number (and subtract by 1, so say you want item 1 you need to type 0) of the item</p>
     <div class="list">
-      <label>Item: <input type="text" id="foodsel"></label>
+      <label>Shopping Groceries: <input type="text" id="item"></label>
+      <p></p>
       <button onclick = "DeleteanItem();">Delete a food item</button>
+      <p></p>
       <button onclick = "Addanitem();">Add a food item </button>
+      <p></p>
       <button onclick = "MoveUpandMoveDown(1);">Move an item down</button>
+      <p></p>
       <button onclick = "MoveUpandMoveDown(-1);">Move an item up</button>
         </div>
     <div class="standard">
